@@ -14,7 +14,7 @@ int main() {
 	Spherel s2(Vec3l(5.0, -1., -15.), 2., 1.1, Vec3l(0.90, 0.76, 0.46), Vec3l(0.), 1., 0.0);
 	Spherel s3(Vec3l(5.0, 0., -25.), 3., 1.1, Vec3l(0.65, 0.77, 0.97), Vec3l(0.), 1., 0.0);
 	Spherel s4(Vec3l(-5.5, 0., -15.), 3., 1.1, Vec3l(0.90, 0.90, 0.90), Vec3l(0.), 1., 0.0);
-	Spherel s_array[5] = {s0, s1, s2, s3, s4};
+	Spherel s_array[5] = { s0, s1, s2, s3, s4 };
 	std::vector<Spherel> sphere_list(s_array, s_array + 5);
 	//std::cout << "s3 center: " << s3.center << "s3 radius: " << s3.radius << std::endl;
 	//std::cout << sphere_list.size() << std::endl;

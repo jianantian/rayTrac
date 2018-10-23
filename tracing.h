@@ -142,7 +142,7 @@ void render(std::vector<Spherel> sphere_list, int width, int height, float view_
 	std::ofstream pic("res.ppm");
 	pic << "P3\n" << width << " " << height << "\n255\n";
 
-	int ns = 30;
+	int ns = 10;
 	unsigned int num;
 	errno_t err;
 	double r;
@@ -152,7 +152,7 @@ void render(std::vector<Spherel> sphere_list, int width, int height, float view_
 			for (unsigned int k = 0; k < ns; k++) {
 				err = rand_s(&num);
 				r = (err != 0) ? (double)num / ((double)UINT_MAX + 1) : 0.5;
-				r = r / 100;
+				r = r / 10;
 				x = (2 * (j + 0.5 + r) * inv_width - 1) * tan_theta * ratio;
 				y = (1 - (2 * (i + r + 0.5) * inv_height)) * tan_theta;
 				r_direction = Vec3l(x, y, -1.0);
